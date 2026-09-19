@@ -1,0 +1,220 @@
+<title>FaceToSpace Privacy</title>
+<style>
+  :root {
+    --bg: #F7F8FC;
+    --surface: #FFFFFF;
+    --border: #E3E7F0;
+    --text: #1A1F36;
+    --text-muted: #5B6478;
+    --accent: #6D4FE0;
+    --accent-soft: #EFEBFC;
+    --cyan: #0E8FA8;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0B0E1A;
+      --surface: #12162A;
+      --border: #232842;
+      --text: #EDEFF7;
+      --text-muted: #9AA2BE;
+      --accent: #A78BFA;
+      --accent-soft: #241E44;
+      --cyan: #5DE4FF;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0B0E1A;
+    --surface: #12162A;
+    --border: #232842;
+    --text: #EDEFF7;
+    --text-muted: #9AA2BE;
+    --accent: #A78BFA;
+    --accent-soft: #241E44;
+    --cyan: #5DE4FF;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding-inline: 16px;
+    padding-block: 48px;
+    line-height: 1.6;
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 14px;
+  }
+
+  .eyebrow::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--cyan);
+    display: inline-block;
+  }
+
+  h1 {
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px;
+    text-wrap: balance;
+  }
+
+  .updated {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin: 0 0 36px;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px clamp(20px, 4vw, 36px);
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  h2 .num {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--accent);
+    background: var(--accent-soft);
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+  }
+
+  p {
+    margin: 0 0 12px;
+    color: var(--text);
+    max-width: 62ch;
+  }
+
+  p:last-child { margin-bottom: 0; }
+
+  .muted { color: var(--text-muted); }
+
+  ul {
+    margin: 0 0 12px;
+    padding-left: 20px;
+    color: var(--text);
+  }
+
+  li { margin-bottom: 6px; max-width: 60ch; }
+
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .badge {
+    font-size: 12.5px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border: 1px solid var(--border);
+  }
+
+  a { color: var(--accent); }
+
+  footer {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-top: 40px;
+  }
+</style>
+
+<div class="page">
+  <div class="eyebrow">Privacy Policy</div>
+  <h1>FaceToSpace</h1>
+  <p class="updated">Last updated: September 19, 2026</p>
+
+  <div class="card">
+    <h2><span class="num">1</span>The short version</h2>
+    <p>FaceToSpace is a simple flight arcade game. If you choose to add a selfie, it is used only to render your face on the in-game character and <strong>never leaves your device</strong> &mdash; it is not uploaded, stored on any server, or shared with anyone, including us.</p>
+    <div class="badge-row">
+      <span class="badge">No account required</span>
+      <span class="badge">No data leaves your device</span>
+      <span class="badge">No third-party sharing</span>
+      <span class="badge">No ads</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">2</span>What the app accesses</h2>
+    <p><strong>Camera and photo library.</strong> Only if you tap &ldquo;Take Selfie&rdquo; or &ldquo;Choose Photo,&rdquo; the app requests access to your camera or photo library so you can pick an image for your in-game character. This is entirely optional &mdash; you can skip it and fly with the default character instead. The image is processed and stored locally on your device only.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">3</span>What the app stores</h2>
+    <p>The app saves a small amount of information locally on your device, using standard on-device storage, so it's available next time you open the app:</p>
+    <ul>
+      <li>Your selected photo (if any)</li>
+      <li>Your best altitude score</li>
+      <li>Number of flights played</li>
+    </ul>
+    <p class="muted">None of this is transmitted to us or to any third party. Uninstalling the app removes it.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">4</span>What we don't do</h2>
+    <ul>
+      <li>We don't collect analytics or usage tracking.</li>
+      <li>We don't show ads.</li>
+      <li>We don't require or use a login/account.</li>
+      <li>We don't sell or share any data, because none is collected off your device.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">5</span>Children's privacy</h2>
+    <p>FaceToSpace is not directed at children under 13, and we do not knowingly collect information from children. Since no data leaves the device in the first place, there is nothing to collect regardless of the player's age.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">6</span>Changes to this policy</h2>
+    <p>If this policy changes &mdash; for example, if a future version of the app adds ads or analytics &mdash; this page will be updated and the "last updated" date above will change accordingly.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">7</span>Contact</h2>
+    <p>Questions about this policy? Reach out at <a href="mailto:deepanagrawal6@gmail.com">deepanagrawal6@gmail.com</a>.</p>
+  </div>
+
+  <footer>FaceToSpace &mdash; 60 Second Flight Challenge</footer>
+</div>
